@@ -10,3 +10,11 @@
 
 // Y en cuanto a los conceptos avanzados, veré librerías de terceros, módulos JavaScript, herramientas como webpack y babel... Trabajaré con almacenamiento en el navegador,
 // soporte del navegador, frameworks javascript, meta programación, introducción a NodeJS, seguridad, despliegue, optimización de rendimiento y pérdidas de memoria.
+
+/* ¿Cómo aprovechar el curso al máximo? */
+
+// 1. Ver los videos.
+// 2. Programar junto con el profesor. Pausar y rebobinar si es necesario.
+// 3. Practicar (hay proyectos y quizes).
+// 4. Debuggear y buscar al encontrar vacíos o errores. Usar el código adjunto, Google, la búsqueda de Udemy.
+// 5. Preguntar y responder.
