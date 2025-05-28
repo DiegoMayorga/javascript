@@ -24,3 +24,4 @@
 
 // Para concluir, JavaScript es un lenguaje de programación dinámico y débilmente tipado. Interpretado: Compilado sobre la marcha. "Lenguaje alojado": Corre en diferentes entornos
 // (por ejemplo, el navegador). Casos de uso más destacados: Corre el código en un navegador (en una página web).
+
