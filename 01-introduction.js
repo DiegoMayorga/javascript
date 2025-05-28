@@ -21,3 +21,6 @@
 /* JavaScript en acción */
 
 // Hay un floder (01-javascript-in-action) en el que veré un ejemplo de lo antes mencionado.
+
+// Para concluir, JavaScript es un lenguaje de programación dinámico y débilmente tipado. Interpretado: Compilado sobre la marcha. "Lenguaje alojado": Corre en diferentes entornos
+// (por ejemplo, el navegador). Casos de uso más destacados: Corre el código en un navegador (en una página web).
