@@ -25,3 +25,15 @@
    | de ejecución.                     | ejemplo, un número.               |
    |-----------------------------------|-----------------------------------|
 */
+
+/* JavaScript se ejecuta en un entorno alojado */
+
+// Lo más común es que JavaScript se utilice en el lado del navegador, pero también hay otros enfoques como el lado del servidor.
+// JavaScript se inventó para crear más páginas web dinámicas ejecutándose en el navegador.
+// De hecho puede manipular el código HTML, CSS, enviar solicitudes HTTP y mucho más. JavaScript no puede acceder al sistema de archivos local,
+// interactuar con el sistema operativo, etc.
+
+// El motor de JavaScript de Google (V8) fue extraído para correr JavaScript en cualquier lugar (llamado NodeJS)
+// NodeJS puede ser ejecutado en cualquier máquina y se usa entonces frecuentemente para construir backends de la web (JS del lado del servidor).
+
+// NodeJS PUEDE acceder al sistema de archivos, interactuar con el sistema operativo, etc. NO PUEDE manipular el HTML o CSS.
