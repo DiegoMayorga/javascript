@@ -7,3 +7,21 @@
 // Todo esto lo hace en un solo hilo.
 
 /* Single Threading es un concepto fundamental en JavaScript */
+
+/* ¿Dinámico? ¿Debilmente tipado? */
+
+/* |-----------------------------------+-----------------------------------|
+   | Lenguaje dinámico e interpretado  +     Debilmente tipado             |
+   |                                   |                                   |
+   | No es precomplilado. Por el       | Los tipos de dato son asumidos.   |
+   | contrario, es analizado y         | Se asignan a variables de manera  |
+   | compilado sobre la marcha. Por    | automática.                       |
+   | ejemplo, en el navegador.         |                                   |
+   |                                   | En otros lenguajes de programación| 
+   | El código es evaluado y ejecutado | debo definir el tipo de dato que  |
+   | en tiempo de ejecución.           | almaceno en una variable. En JS   |
+   |                                   | no defino que algunas variables   |
+   | El código puede cambiar en tiempo | deban tener cierto valor. Por     |
+   | de ejecución.                     | ejemplo, un número.               |
+   |-----------------------------------|-----------------------------------|
+*/
