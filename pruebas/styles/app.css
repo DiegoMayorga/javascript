@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  background-color: antiquewhite;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100dvh;
+}
+
+.header {
+  background-color: #d9814e;
+  height: 46px;
+}
+
+.content {
+  color: black;
+}
+
+footer {
+  background-color: #bf6341;
+}
+
+button {
+  padding: 6px 10px;
+  border-radius: 15px;
+}
+
+.toggle {
+  background-color: black;
+}
+
+.content.toggle {
+  color: white;
+}
