@@ -3,12 +3,15 @@
 // JS sabe que existe pero no se le ha asignado valor.
 // let currentResult;
 // El punto y coma es generalmente opcional.
-let currentResult = 0;
+const defaultResult = 0;
+let currentResult = defaultResult; // Se puede inicializar una variable con otra variable como valor. Sería una copia de esa constante.
 
 // Trabajando con variables y operadores.
-currentResult = (currentResult + 10) * (3 / 2) - 1;
+currentResult = ((currentResult + 10) * 3) / 2 - 1;
 // Los operadores me permiten manipular valores
 // (+, -, *, /, %, **, ++, --)
 // También el operador de asignación (=)
 
-outputResult(currentResult, "");
+let calculationDescription = `(${defaultResult} + 10) * 3 / 2 - 1`;
+
+outputResult(currentResult, calculationDescription);
