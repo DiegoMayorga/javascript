@@ -8,7 +8,7 @@ let currentResult = defaultResult; // Se puede inicializar una variable con otra
 
 function add() {
   currentResult = currentResult + userInput.value;
-  outputResult(currentResult, calculationDescription);
+  outputResult(currentResult, "");
 }
 // Para las funciones, el comportamiento de top to bottom no aplica. Puedo crear funciones después de usarlas.
 // Sin embargo, es más entendible si primero la creo y luego la utilizo.
@@ -20,7 +20,7 @@ function add() {
 // (+, -, *, /, %, **, ++, --)
 // También el operador de asignación (=)
 
-let calculationDescription = `(${defaultResult} + 10) * 3 / 2 - 1`;
+// let calculationDescription = `(${defaultResult} + 10) * 3 / 2 - 1`;
 // let errorMessage = "An error" + "occurred!";
 
 addBtn.addEventListener("click", add);
