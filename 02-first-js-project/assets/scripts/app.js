@@ -13,5 +13,6 @@ currentResult = ((currentResult + 10) * 3) / 2 - 1;
 // También el operador de asignación (=)
 
 let calculationDescription = `(${defaultResult} + 10) * 3 / 2 - 1`;
+// let errorMessage = "An error" + "occurred!";
 
 outputResult(currentResult, calculationDescription);
