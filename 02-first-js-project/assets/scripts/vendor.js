@@ -11,4 +11,3 @@ function outputResult(result, text) {
   currentResultOutput.textContent = result;
   currentCalculationOutput.textContent = text;
 }
-// outputResult(1, 5);
