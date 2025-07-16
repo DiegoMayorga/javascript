@@ -7,7 +7,9 @@ const defaultResult = 0;
 let currentResult = defaultResult; // Se puede inicializar una variable con otra variable como valor. Sería una copia de esa constante.
 
 function add() {
-  currentResult = currentResult + userInput.value;
+  currentResult = currentResult + parseInt(userInput.value); // Cualquier cosa que obtengo de un input es de tipo string. Debo convertirlo a número.
+  // Una forma rápida de convertir un string a número es usar el operador + antes del valor. La otra forma es con Number(), un método que me permite
+  // castearlo a número. parseInt() es otra opción. Con parseFloat también lo convierto en un número, pero en este caso es flotante.
   outputResult(currentResult, "");
 }
 // Para las funciones, el comportamiento de top to bottom no aplica. Puedo crear funciones después de usarlas.
