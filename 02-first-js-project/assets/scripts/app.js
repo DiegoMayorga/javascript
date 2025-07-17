@@ -8,7 +8,7 @@ let currentResult = defaultResult; // Se puede inicializar una variable con otra
 let logEntries = [];
 // Gets input from input field
 function getUserNumberInput() {
-  return parseInt(usrInput.value);
+  return usrInput.value;
 }
 
 // Generates and writes calculation log
