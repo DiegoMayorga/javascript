@@ -66,3 +66,14 @@ Si hago cambios en el Sources de las DevTools, los cambios solo se realizan en e
 4. Debuggeando código desde el IDE. Hay una extensión llamada debugger from Chrome.
 
 */
+
+/*
+
+RECURSOS INTERESANTES QUE ME PUEDEB SERVIR:
+
+VS Code Docs: https://code.visualstudio.com/docs
+VS Code Keybindings: https://code.visualstudio.com/docs/getstarted/keybindings
+VS Code Extensions Docs: https://code.visualstudio.com/docs/editor/extension-gallery
+Google Chrome DevTools Docs: https://developers.google.com/web/tools/chrome-devtools/
+
+*/
