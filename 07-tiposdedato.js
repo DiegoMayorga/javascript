@@ -6,8 +6,7 @@
 "Hola",
   "Hola",
   `Hola`,
-  ""// ¿Cómo se ejecuta un script? // Importante para trabajar con texto, palabras, etc.
-  // El código se ejecuta de arriba a abajo, línea por línea.
+  ""// El código se ejecuta de arriba a abajo, línea por línea. // ¿Cómo se ejecuta un script? // Importante para trabajar con texto, palabras, etc.
 
   /* Más sobre strings */
   // Puedo usar comillas simples entre comillas doble, comillas dobles entre comillas simples y cualquiera de las
@@ -16,4 +15,3 @@
   `"Hola"`; // "Hola" Con los template literals también puedo insertar contenido dinámico, como variables.
 ("'Hola'"); // 'Hola'
 ('"Hola"'); // "Hola"
-
