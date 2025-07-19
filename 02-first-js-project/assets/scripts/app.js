@@ -8,7 +8,7 @@ let currentResult = defaultResult; // Se puede inicializar una variable con otra
 let logEntries = [];
 // Gets input from input field
 function getUserNumberInput() {
-  return usrInput.value;
+  return Number(usrInput.value);
 }
 
 // Generates and writes calculation log
@@ -33,37 +33,50 @@ function writeToLog(
   console.log(logEntries);
 }
 
-function add() {
+function calculateResult(calculationType) {
   const enteredNumber = getUserNumberInput();
+  if (
+    (calculationType !== "ADD" &&
+      calculationType !== "SUBTRACT" &&
+      calculationType !== "MULTIPLY" &&
+      calculationType !== "DIVIDE") ||
+    !enteredNumber // Si el número ingresado es 0, no se ejecuta el código. Esto es igual a enteredNumber === 0. 0 es tratado como false, por ende al invertirlo será true.
+  ) {
+    return;
+  }
+
   const initialResult = currentResult;
-  currentResult += enteredNumber; // Cualquier cosa que obtengo de un input es de tipo string. Debo convertirlo a número.
-  // Una forma rápida de convertir un string a número es usar el operador + antes del valor. La otra forma es con Number(), un método que me permite
-  // castearlo a número. parseInt() es otra opción. Con parseFloat también lo convierto en un número, pero en este caso es flotante.
-  createAndWriteOutput("+", initialResult, enteredNumber);
-  writeToLog("ADD", initialResult, enteredNumber, currentResult);
+  let mathOperator;
+  if (calculationType === "ADD") {
+    currentResult += enteredNumber;
+    mathOperator = "+";
+  } else if (calculationType === "SUBTRACT") {
+    currentResult -= enteredNumber;
+    mathOperator = "-";
+  } else if (calculationType === "MULTIPLY") {
+    currentResult *= enteredNumber;
+    mathOperator = "*";
+  } else if (calculationType === "DIVIDE") {
+    currentResult /= enteredNumber;
+    mathOperator = "/";
+  }
+  createAndWriteOutput(mathOperator, initialResult, enteredNumber);
+  writeToLog(calculationType, initialResult, enteredNumber, currentResult);
+}
+
+function add() {
+  calculateResult("ADD");
 }
 
 function subtract() {
-  const enteredNumber = getUserNumberInput();
-  const initialResult = currentResult;
-  currentResult -= enteredNumber;
-  createAndWriteOutput("-", initialResult, enteredNumber);
-  writeToLog("SUBTRACT", initialResult, enteredNumber, currentResult);
+  calculateResult("SUBTRACT");
 }
 
 function multiply() {
-  const enteredNumber = getUserNumberInput();
-  const initialResult = currentResult;
-  currentResult *= enteredNumber;
-  createAndWriteOutput("*", initialResult, enteredNumber);
-  writeToLog("MULTIPLY", initialResult, enteredNumber, currentResult);
+  calculateResult("MULTIPLY");
 }
 function divide() {
-  const enteredNumber = getUserNumberInput();
-  const initialResult = currentResult;
-  currentResult /= enteredNumber;
-  createAndWriteOutput("/", initialResult, enteredNumber);
-  writeToLog("DIVIDE", initialResult, enteredNumber, currentResult);
+  calculateResult("DIVIDE");
 }
 
 // Para las funciones, el comportamiento de top to bottom no aplica. Puedo crear funciones después de usarlas.
