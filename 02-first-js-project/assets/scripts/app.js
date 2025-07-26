@@ -33,7 +33,7 @@ function writeToLog(
   console.log(logEntries);
 }
 
-function calculateResult(calculationType) {
+/* function calculateResult(calculationType) {
   const enteredNumber = getUserNumberInput();
   if (
     (calculationType !== "ADD" &&
@@ -62,9 +62,9 @@ function calculateResult(calculationType) {
   }
   createAndWriteOutput(mathOperator, initialResult, enteredNumber);
   writeToLog(calculationType, initialResult, enteredNumber, currentResult);
-}
+} */
 
-function add() {
+/* function add() {
   calculateResult("ADD");
 }
 
@@ -77,7 +77,7 @@ function multiply() {
 }
 function divide() {
   calculateResult("DIVIDE");
-}
+} */
 
 // Para las funciones, el comportamiento de top to bottom no aplica. Puedo crear funciones después de usarlas.
 // Sin embargo, es más entendible si primero la creo y luego la utilizo.
@@ -92,7 +92,33 @@ function divide() {
 // let calculationDescription = `(${defaultResult} + 10) * 3 / 2 - 1`;
 // let errorMessage = "An error" + "occurred!";
 
-addBtn.addEventListener("click", add);
-subtractBtn.addEventListener("click", subtract);
-multiplyBtn.addEventListener("click", multiply);
-divideBtn.addEventListener("click", divide);
+function calculate(operation) {
+  const enteredNumber = getUserNumberInput();
+  const initialResult = currentResult;
+  let operator;
+  switch (operation) {
+    case "ADD":
+      currentResult += enteredNumber;
+      operator = "+";
+      break;
+    case "SUBTRACT":
+      currentResult -= enteredNumber;
+      operator = "-";
+      break;
+    case "MULTIPLY":
+      currentResult *= enteredNumber;
+      operator = "*";
+      break;
+    case "DIVIDE":
+      currentResult /= enteredNumber;
+      operator = "/";
+      break;
+  }
+  createAndWriteOutput(operator, initialResult, enteredNumber);
+  writeToLog(operation, initialResult, enteredNumber, currentResult);
+}
+
+addBtn.addEventListener("click", () => calculate("ADD"));
+subtractBtn.addEventListener("click", () => calculate("SUBTRACT"));
+multiplyBtn.addEventListener("click", () => calculate("MULTIPLY"));
+divideBtn.addEventListener("click", () => calculate("DIVIDE"));
