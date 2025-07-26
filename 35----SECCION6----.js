@@ -26,3 +26,8 @@
 
 // Dado que ambos conceptos obviamente están muy conectados, es normal decir: "Vamos a definir qué argumentos recibe una función"
 // o algo por el estilo, desde definir los argumentos de una función al final significa que yo configuro los parámetros (y viceversa).
+
+// RECURSOS
+
+// More on Functions (MDN): https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions
+// bind(): https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind
