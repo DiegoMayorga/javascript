@@ -82,9 +82,9 @@ for (const li in allLis) {
 // Puedo usar lo siguiente:
 const ul = document.querySelector("ul");
 ul.children[1]; // Devuelve el segundo <li> El problema acá sería si hay otros elementos antes de ese <li>.
-ul.childNodes
-ul.firstElementChild // Primer elemento hijo
-ul.lastElementChild // Último elemento hijo
+ul.childNodes;
+ul.firstElementChild; // Primer elemento hijo
+ul.lastElementChild; // Último elemento hijo
 
 /* ParendNode y ParentElement */
 const li = document.querySelector("li");
@@ -95,3 +95,27 @@ li.parentNode; // Devuelve el elemento padre
 // El método closest() es útil para encontrar el elemento más cercano que cumpla con una condición.
 // Por ejemplo, si quiero encontrar el elemento más cercano que tenga de nombre "body", puedo usar closest() como sigue:
 li.closest("body"); // Devuelve el elemento más cercano con la clase "list-item"
+
+// Si tengo un header y un ul como hermanos:
+<>
+  <header></header>
+  <ul></ul>
+  <input />
+</>;
+
+const ul2 = document.querySelector("ul");
+ul2.previousElementSibling; // Aquí me estoy refiriendo al header, que es el hermano anterior del ul.
+ul2.nextElementSibling; // El input es el hermano siguiente del ul, es decir, el input.
+
+// Atravesando el DOM vs métodos de consulta (query methods)
+<body>
+  <header></header>
+  <ul></ul>
+  <input />
+</body>;
+
+const newUl = document.body.firstElementChild.nextElementSibling; // Esta es otra forma de acceder al ul.
+const firstLi = newUl.firstElementChild; // El primer elemento hijo del ul. El primer li.
+
+// No es recomendable porque si creo un elemento HTML en la posición que estaba destinada para ese ul según la forma en que lo seleccioné,
+// ya no sería un ul, sino el nuevo elemento que agregué.
