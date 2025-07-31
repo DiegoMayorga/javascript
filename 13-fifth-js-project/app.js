@@ -83,3 +83,6 @@ newLi.textContent = "Item 4";
 list.append(newLi);
 
 listItems[0].textContent = "Item 11"; // Cambio el primer elemento de la lista a "Item 11".
+
+list.remove(); // Elimina la list del DOM.
+list.parentElement.remove(list); // Es otra forma de borrar el mismo elemento list.
