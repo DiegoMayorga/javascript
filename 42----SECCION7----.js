@@ -29,3 +29,6 @@
 // Métodos como alert() y prompt() son métodos de window. Se podrían escribir como document.alert() o window.prompt(), pero el navegador los analiza y permite que se
 // ejecuten sin escribir window.
 // window.document.getElementById() es otro ejemplo.
+
+// RECURSOS ÚTILES
+// Thorough DOM Introduction on MDN (also check the linked guides on the left on that page): https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction
