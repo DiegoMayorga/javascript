@@ -188,12 +188,12 @@ console.log(sortedPrices2.reverse()); // Se ubican al contrario, de mayor a meno
 
 /* EL METODO REDUCE */
 
-const prices = [10.99, 5.99, 3.99, 6.59];
+/* const prices = [10.99, 5.99, 3.99, 6.59]; */
 /* let sum = 0;
 prices.forEach((price) => (sum += price));
 console.log(sum); */
 
-const sum = prices.reduce((prevValue, currValue, currIndex, prices) => {
+/* const sum = prices.reduce((prevValue, currValue, currIndex, prices) => {
   return prevValue + currValue;
 }, 0); // Primer argumento es una función, el segundo es el valor inicial. Se ejecuta elemento por elemento del arreglo.
 
@@ -201,7 +201,7 @@ console.log(sum);
 
 const sum2 = prices.reduce((acc, cur) => acc + cur, 0); // Lo mismo pero de una forma más corta. acc es acumulable.
 console.log(sum2);
-
+ */
 /*
 [ 1 2 3 ] 0
 [   2 3 ] 1
@@ -210,3 +210,16 @@ console.log(sum2);
 
 Así es como funciona. Se suma elemento por elemento y se va acumulando.
 */
+
+/* const data = "newyork;10.99;2000";
+
+const transformedData = data.split(";");
+transformedData[1] = +transformedData[1];
+console.log(transformedData);
+
+const nameFragments = ["Diego", "Mayorga"];
+const name = nameFragments.join(" ");
+console.log(name); */
+
+/* EL OPERADOR SPREAD */
+
