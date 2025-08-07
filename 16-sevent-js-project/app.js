@@ -223,3 +223,27 @@ console.log(name); */
 
 /* EL OPERADOR SPREAD */
 
+/* const nameFragments = ["Diego", "Mayorga"];
+const copiedNameFragments = [...nameFragments];
+nameFragments.push("Torres"); // modifica solo el array original. El otro al ser una copia no se modifica.
+console.log(nameFragments, copiedNameFragments);
+
+const prices = [10.99, 5.99, 3.99, 6.59];
+console.log(Math.min(...prices)); // Con ...prices obtengo elemento por elemento del arreglo y hallo el mínimo con Math.min().
+
+const persons = [
+  { name: "Max", age: 30 },
+  { name: "Manuel", age: 31 },
+  ];
+  const copiedPersons = [
+    persons.map((person) => ({ name: person.name, age: person.age })), // el map también hace una copia del arreglo original. Por eso no es necesario el spread aquí.
+    ];
+    persons.push({ name: "Anna", age: 29 });
+    persons[0].age = 31;
+    console.log(persons, copiedPersons); // El arreglo original se modifica pero el copiado no. */
+
+/* COMPRENDIENDO LA DESTRUCTURACIÓN DE ARREGLOS */
+
+/* const nameFragments = ["Diego", "Mayorga", "Torres", "Malagón"];
+const [firstName, lastName, ...otherInformation ] = nameFragments;
+console.log(firstName, lastName, ...otherInformation); */
