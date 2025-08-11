@@ -56,3 +56,21 @@ console.log(personData); */
 // Más fácil y rápido de crear (normalmente también tiene mejor rendimiento).
 
 // Por lo general se trabaja con arreglos y objetos, no es común trabajar con Maps y Sets.
+
+/* WEAKSETS */
+let person = { name: "Juan" };
+const persons = new WeakSet(); // weakSet es un conjunto de objetos, no de valores.
+persons.add(person);
+
+// ...algunas operaciones
+// person = null; // Elimino el objeto. Limpia la data de memoria.
+
+console.log(persons);
+
+/* WEAKMAPS */
+const personData = new WeakMap(); // weakMap es un conjunto de objetos, no de valores.
+personData.set(person, "Extra info!");
+
+person = null; // Elimino el objeto. Limpia la data de memoria.
+
+console.log(personData);

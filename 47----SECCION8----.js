@@ -15,3 +15,7 @@
 // ¿Qué es un objeto como arreglo?
 // Es técnicamente un objeto que tiene una propiedad length y usa índices para acceder a sus elementos.
 // No todo objeto como arreglo es un arreglo. Otros son: NodeList, String.
+
+/* LINKS UTILES */
+
+// Array en MDN (y métodos): https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
