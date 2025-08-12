@@ -44,3 +44,17 @@ console.log(person[keyName]); // Acceder a una propiedad con un nombre que no se
 console.log(person.level); // "Hello"
 // Creé esa propiedad con la constante userChosenKeyName. Para agregarla al objeto, usé los corchetes y el nombre de la constante dentro.
 // Así, pude con el person.level acceder al valor. Es otra forma de crear keys.
+
+/* SPREAD OPERATORS */
+
+const person = { name: "Diego", hobbies: ["Sports", "Cooking"] };
+const anotherPerson = { ...person, age: 25 };
+console.log(person); // { name: "Diego", hobbies: ["Sports", "Cooking"] }
+console.log(anotherPerson); // { name: "Diego", hobbies: ["Sports", "Cooking"], age: 25 }
+// Es una copia, porque es un valor de referencia. Por tanto, no queremos que si uno cambie el otro también.
+
+// Si tengo un objeto en person y quiero sobreescribir por ejemplo el valor de nombre luego de hacer la copia, puedo hacerlo así:
+const evenAnotherPerson = { ...person, name: "Pedro" };
+// A pesar de que name ya estaba en person, aquí simplemente se sobreescribe el valor.
+
+const person2 = Object.assign({}, person, { name: "Juan" });
