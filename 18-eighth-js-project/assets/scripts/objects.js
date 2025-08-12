@@ -1,21 +1,44 @@
-const person = {
-  name: "John",
-  age: 30,
-  hobbies: ["music", "movies", "sports"],
-  greet: function () {
-    alert(`Hi, there!`);
-  },
+const addMovieBtn = document.getElementById("add-movie-btn");
+const searchBtn = document.getElementById("search-btn");
+
+const movies = [];
+
+const renderMovies = () => {
+  const movieList = document.getElementById("movie-list");
+  if (movies.length === 0) {
+    movieList.classList.remove("visible");
+  } else {
+    movieList.classList.add("visible");
+  }
+  movieList.innerHTML = "";
+
+  movies.forEach((movie) => {
+    const movieEl = document.createElement("li");
+    movieEl.textContent = movie.info.title;
+    movieList.append(movieEl);
+  });
 };
 
-// person.greet();
-// person.age = 31;
-// person.hobbies.push("art");
-delete person.age; // Elimina la propiedad age del objeto person.
-person.age = null; // Limpio el valor de la propiedad age del objeto person.
-person.isAdmin = true;
-// person.name = undefined; // No debería asignar undefined a una propiedad ni a una variable.
+const addMovieHandler = () => {
+  const title = document.getElementById("title").value;
+  const extraName = document.getElementById("extra-name").value;
+  const extraValue = document.getElementById("extra-value").value;
 
-console.log(person);
+  if (
+    title.trim() === "" ||
+    extraName.trim() === "" ||
+    extraValue.trim() === ""
+  ) {
+    return;
+  }
 
-// Si quisiera eliminar por completo una propiedad del objeto, uso delete.
-// Asigno null a la propiedad si quiero limpiar su valor, pero mantener la propiedad.
+  const newMovie = {
+    info: { title, [extraName]: extraValue },
+    id: Math.random(),
+  };
+
+  movies.push(newMovie);
+  renderMovies();
+};
+
+addMovieBtn.addEventListener("click", addMovieHandler);
